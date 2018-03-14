@@ -93,24 +93,24 @@ define(['Class','ImageLoader','SpriteSheet','Animation'],function(Class,ImageLoa
 
 	];
 	
-	rita.addAnimation("idlerita",new Animation(idleframesrita));
+	rita.addAnimation("walkrita",new Animation(idleframesrita));
 
 		//rita asset
 	var rita2 = new Assets("rita2","res/textures/ritawalk.png",600, 900);
 	
 	var walkframesrita = [
-	{frame:rita2.sheet.crop(0,0,rita.width,rita.height),speed:framespeedrita},
-	{frame:rita2.sheet.crop(600,0,rita.width,rita.height),speed:framespeedrita},
-	{frame:rita2.sheet.crop(1200,0,rita.width,rita.height),speed:framespeedrita},
-	{frame:rita2.sheet.crop(1800,0,rita.width,rita.height),speed:framespeedrita},
-	{frame:rita2.sheet.crop(2400,0,rita.width,rita.height),speed:framespeedrita},
-	{frame:rita2.sheet.crop(3000,0,rita.width,rita.height),speed:framespeedrita},
-	{frame:rita2.sheet.crop(3600,0,rita.width,rita.height),speed:framespeedrita},
-	{frame:rita2.sheet.crop(4200,0,rita.width,rita.height),speed:framespeedrita},
-	{frame:rita2.sheet.crop(4800,0,rita.width,rita.height),speed:framespeedrita},
-	{frame:rita2.sheet.crop(5400,0,rita.width,rita.height),speed:framespeedrita},
-	{frame:rita2.sheet.crop(6000,0,rita.width,rita.height),speed:framespeedrita},
-	{frame:rita2.sheet.crop(6600,0,rita.width,rita.height),speed:framespeedrita},
+	{frame:rita2.sheet.crop(0,0,rita2.width,rita2.height),speed:framespeedrita},
+	{frame:rita2.sheet.crop(600,0,rita2.width,rita2.height),speed:framespeedrita},
+	{frame:rita2.sheet.crop(1200,0,rita2.width,rita2.height),speed:framespeedrita},
+	{frame:rita2.sheet.crop(1800,0,rita2.width,rita2.height),speed:framespeedrita},
+	{frame:rita2.sheet.crop(2400,0,rita2.width,rita2.height),speed:framespeedrita},
+	{frame:rita2.sheet.crop(3000,0,rita2.width,rita2.height),speed:framespeedrita},
+	{frame:rita2.sheet.crop(3600,0,rita2.width,rita2.height),speed:framespeedrita},
+	{frame:rita2.sheet.crop(4200,0,rita2.width,rita2.height),speed:framespeedrita},
+	{frame:rita2.sheet.crop(4800,0,rita2.width,rita2.height),speed:framespeedrita},
+	{frame:rita2.sheet.crop(5400,0,rita2.width,rita2.height),speed:framespeedrita},
+	{frame:rita2.sheet.crop(6000,0,rita2.width,rita2.height),speed:framespeedrita},
+	{frame:rita2.sheet.crop(6600,0,rita2.width,rita2.height),speed:framespeedrita},
 
 	];
 	
