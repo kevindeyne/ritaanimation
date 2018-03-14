@@ -19,6 +19,7 @@ define(['Creature','Assets'],function(Creature,Assets){
 			this.assets.animations.walk_up.tick();
 			this.assets.animations.walk_down.tick();
 			this.assets.animations.idle.tick();
+			this.isMoving();
 		},
 		
 		render:function(_g){
@@ -43,21 +44,6 @@ define(['Creature','Assets'],function(Creature,Assets){
 			}
 		},
 		
-		isMoving:function(){
-			this.moving =0;
-			if(this.xMove<0){
-				this.moving = 1;
-			} else if (this.xMove>0){
-				this.moving = 2;
-			}else if (this.yMove<0) {
-				this.moving = 3;
-			}else if (this.yMove>0){
-				this.moving = 4;
-			}else{
-				this.moving = 0;
-			}
-		},
-		
 		getCurrentAnimationFrame:function(){
 			if(this.xMove<0){
 				return this.assets.animations.walk_left.getCurrentFrame();
@@ -70,6 +56,15 @@ define(['Creature','Assets'],function(Creature,Assets){
 				return this.assets.animations.walk_down.getCurrentFrame();
 			}else{
 				return this.assets.animations.idle.getCurrentFrame();
+			}
+		},
+		
+		isMoving:function(){
+			var playerMove = (this.xMove + this.yMove);
+			if(playerMove = 0){
+				console.log('idle');
+			} else {
+				console.log('moving');
 			}
 		}
 

@@ -93,7 +93,7 @@ define(['Class','ImageLoader','SpriteSheet','Animation'],function(Class,ImageLoa
 
 	];
 	
-	rita.addAnimation("walkrita",new Animation(idleframesrita));
+	rita.addAnimation("idlerita",new Animation(idleframesrita));
 
 		//rita asset
 	var rita2 = new Assets("rita2","res/textures/ritawalk.png",600, 900);
