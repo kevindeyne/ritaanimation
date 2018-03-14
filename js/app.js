@@ -1,0 +1,43 @@
+
+requirejs.config({
+	"baseUrl":"js",
+	"paths": {
+		//Libs
+		"Class":"libs/class",
+		"Jquery":"libs/jquery",
+		//Classes
+		"Animation":"app/classes/gfx/Animation",
+		"Assets":"app/classes/gfx/Assets",
+		"Creature":"app/classes/entities/creatures/Creature",
+		"Character":"app/classes/cinematics/Character",
+		"DirtTile":"app/classes/tiles/DirtTile",
+		"Display":"app/classes/display/Display",
+		"Entity":"app/classes/entities/Entity",
+		"FloorMat":"app/classes/tiles/FloorMat",
+		"Game":"app/classes/Game",
+		"GameCamera":"app/classes/gfx/GameCamera",
+		"GameState":"app/classes/states/GameState",
+		"GrassTile":"app/classes/tiles/GrassTile",
+		"Handler":"app/classes/Handler",
+		"ImageLoader":"app/classes/gfx/ImageLoader",
+		"KeyManager":"app/classes/input/KeyManager",
+		"Launcher":"app/classes/Launcher",
+		"Player":"app/classes/entities/creatures/Player",
+		"SpriteSheet":"app/classes/gfx/SpriteSheet",
+		"Rectangle":"app/classes/gfx/shapes/Rectangle",
+		"Rita":"app/classes/cinematics/Rita",
+		"State":"app/classes/states/State",
+		"StoneTile":"app/classes/tiles/StoneTile",
+		"TableTopLeft":"app/classes/tiles/TableTopLeft",
+		"TableTopRight":"app/classes/tiles/TableTopRight",
+		"TableBottomLeft":"app/classes/tiles/TableBottomLeft",
+		"TableBottomRight":"app/classes/tiles/TableBottomRight",
+		"Tile":"app/classes/tiles/Tile",
+		"TileLoader":"app/classes/tiles/TileLoader",
+		"Utils":"app/classes/utils/Utils",
+		"WallPaper":"app/classes/tiles/WallPaper",
+		"World":"app/classes/worlds/World"
+	}
+});
+
+require(['app/main']);
