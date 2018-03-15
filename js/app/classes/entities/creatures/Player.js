@@ -8,9 +8,11 @@ define(['Creature','Assets'],function(Creature,Assets){
 			this.bounds.y = 32;
 			this.bounds.width = 25;
 			this.bounds.height = 32;
+			this.moving = false; //default idle
 		},
 		
 		tick:function(_dt){
+			this.moving = false; //every tick, by default (no action), is idle
 			this.getInput(_dt);
 			this.move();
 			this.handler.getGameCamera().centerOnEntity(this);
@@ -31,15 +33,19 @@ define(['Creature','Assets'],function(Creature,Assets){
 			this.yMove = 0;
 			if(this.handler.getKeyManager().up){
 				this.yMove = -this.speed * _dt;
+				this.moving = true; //once input comes in, actually set moving = true for this tick
 			}
 			if(this.handler.getKeyManager().down){
 				this.yMove = this.speed * _dt;
+				this.moving = true;
 			}
 			if(this.handler.getKeyManager().left){
 				this.xMove = -this.speed * _dt;
+				this.moving = true;
 			}
 			if(this.handler.getKeyManager().right){
 				this.xMove = this.speed * _dt;
+				this.moving = true;
 			}
 		},
 		
@@ -59,11 +65,7 @@ define(['Creature','Assets'],function(Creature,Assets){
 		},
 		
 		isMoving:function(){
-			if(this.xMove + this.yMove === 0){
-				return true;
-			} else {
-				return false;
-			}
+			return this.moving;
 		}
 		//return this.xMove + this.yMove === 0
 

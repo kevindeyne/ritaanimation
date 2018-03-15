@@ -8,6 +8,7 @@ define(['Character','Assets','Player','GameState'],function(Character,Assets,Pla
 			this.assets1 = Assets.getAssets('rita2');
 			this.ritaSpritesheet;
 			this.ritaAnimation;
+			this.changeAnimation();
 		},
 		
 		changeAnimation:function(){
@@ -21,8 +22,8 @@ define(['Character','Assets','Player','GameState'],function(Character,Assets,Pla
 		},
 		
 		tick:function(_dt){
-		this.ritaSpritesheet.animations.ritaAnimation.tick();
-		this.gamestate.player.isMoving();
+			this.changeAnimation();
+			this.ritaAnimation.tick();			
 		},
 		
 		render:function(_g){
@@ -31,7 +32,7 @@ define(['Character','Assets','Player','GameState'],function(Character,Assets,Pla
 		},
 		
 		getCurrentAnimationFrameRita:function(){
-				return this.ritaSpritesheet.animations.ritaAnimation.getCurrentFrame();
+			return this.ritaAnimation.getCurrentFrame();
 		}
 		
 	});

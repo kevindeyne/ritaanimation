@@ -57,9 +57,9 @@ define(['Class','ImageLoader','SpriteSheet','Animation'],function(Class,ImageLoa
 	}
 	
 	var idleframes = [
-	{frame:player.sheet.crop(0,0,player.width,player.height),speed:framespeed*80},
-	{frame:player.sheet.crop(player.width,0,player.width,player.height),speed:framespeed},
-	{frame:player.sheet.crop(player.width * 2,0,player.width,player.height),speed:framespeed},
+	{frame:player.sheet.crop(0,0,player.width,player.height),speed:framespeed},
+	//{frame:player.sheet.crop(player.width,0,player.width,player.height),speed:framespeed}, //causes jitter
+	//{frame:player.sheet.crop(player.width * 2,0,player.width,player.height),speed:framespeed}, //causes jitter
 	];
 	
 	//Create Animations
