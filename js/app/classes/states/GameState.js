@@ -5,9 +5,9 @@ define(['State','Player','World','Rita'],function(State,Player,World,Rita){
 	var GameState = State.extend({
 		init:function(_handler){
 			this._super(_handler);
-			this.player = new Player(_handler,20,20);
+			this.player = new Player(_handler,20,20,this);
 			this.world = new World("res/worlds/world1.txt",_handler);
-			this.rita = new Rita(_handler,800,20);
+			this.rita = new Rita(_handler,800,20,this);
 		},
 		
 		tick:function(_dt){
